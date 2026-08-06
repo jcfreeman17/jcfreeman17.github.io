@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { withBase } from '../utils/paths';
+---
+
+<Base title="Collaboration">
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-28 md:pb-20">
+    <SectionHeader
+      title="Collaboration"
+      subtitle="[COPY PENDING]"
+    />
+
+    <p class="text-brand-charcoal leading-relaxed mb-12 max-w-3xl">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare
+      vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+
+    <section class="bg-brand-parchment rounded-sm shadow-[0_2px_12px_rgba(107,76,59,0.10)] p-8 border border-brand-stone/20 mb-16">
+      <h2 class="text-xl font-medium text-brand-charcoal mb-4">PEOPLE 3000</h2>
+      <p class="text-brand-charcoal leading-relaxed mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla
+        vestibulum id ligula porta felis euismod semper.
+      </p>
+      <a
+        href="https://pastglobalchanges.org/ini/wg/people-3000/intro"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-brand-terracotta hover:text-brand-earth font-medium text-sm tracking-wide transition-colors"
+      >
+        Visit PEOPLE 3000 working group →
+      </a>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-xl font-medium text-brand-charcoal mb-4">Collaborator Network</h2>
+      <p class="text-brand-charcoal leading-relaxed mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis
+        dapibus posuere velit aliquet maecenas faucibus mollis interdum:
+      </p>
+      <ul class="grid sm:grid-cols-2 gap-3 text-brand-charcoal">
+        <li>Lorem ipsum — dolor sit amet</li>
+        <li>Consectetur adipiscing — elit sed do</li>
+        <li>Eiusmod tempor — incididunt ut labore</li>
+        <li>Magna aliqua — enim ad minim veniam</li>
+        <li>Quis nostrud — exercitation ullamco</li>
+        <li>Laboris nisi — ut aliquip ex ea commodo</li>
+      </ul>
+    </section>
+
+    <section class="text-center py-8 border-t border-brand-stone/30">
+      <p class="text-brand-charcoal mb-6">Interested in collaborating?</p>
+      <a
+        href={withBase('contact')}
+        class="inline-block bg-brand-terracotta text-white text-sm font-medium tracking-widest uppercase px-8 py-3 hover:bg-brand-earth transition-colors"
+      >
+        Get in Touch →
+      </a>
+    </section>
+  </main>
+</Base>

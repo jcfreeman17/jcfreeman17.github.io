@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<Base title="Contact">
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-28 md:pb-20">
+    <SectionHeader title="Contact" />
+
+    <address class="not-italic text-brand-charcoal leading-relaxed mb-10">
+      <p class="font-medium">Dr. Jacob Freeman</p>
+      <p class="mt-4">Department of Sociology, Anthropology & Criminal Justice</p>
+      <p>Utah State University</p>
+      <p>0730 Old Main Hill, Logan, UT 84332</p>
+    </address>
+
+    <p class="mb-10">
+      <span class="text-brand-stone text-sm uppercase tracking-widest block mb-2">Email</span>
+      <a
+        href="mailto:[EMAIL PLACEHOLDER]"
+        class="text-brand-terracotta hover:text-brand-earth transition-colors"
+      >
+        [EMAIL PLACEHOLDER]
+      </a>
+    </p>
+
+    <p>
+      <span class="text-brand-stone text-sm uppercase tracking-widest block mb-2">Profiles</span>
+      <a
+        href="#"
+        class="text-brand-terracotta hover:text-brand-earth transition-colors"
+        aria-label="Google Scholar profile (placeholder)"
+      >
+        Google Scholar (placeholder)
+      </a>
+    </p>
+  </main>
+</Base>

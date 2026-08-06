@@ -1,0 +1,138 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+
+import { getBaseUrl, withBase } from '../utils/paths';
+
+const base = getBaseUrl();
+const navLinks = [
+  { href: withBase('research'), label: 'Research', path: '/research' },
+  { href: withBase('teaching'), label: 'Teaching', path: '/teaching' },
+  { href: withBase('impact'), label: 'Impact', path: '/impact' },
+  { href: withBase('collaboration'), label: 'Collaboration', path: '/collaboration' },
+  { href: withBase('contact'), label: 'Contact', path: '/contact' },
+];
+
+function normalizePath(pathname: string) {
+  const basePath = base.replace(/\/$/, '') || '';
+  let path = pathname;
+  if (basePath && path.startsWith(basePath)) {
+    path = path.slice(basePath.length) || '/';
+  }
+  if (!path.endsWith('/')) path += '/';
+  return path;
+}
+
+const currentPath = normalizePath(Astro.url.pathname);
+
+function isActive(linkPath: string) {
+  const normalized = linkPath.endsWith('/') ? linkPath : `${linkPath}/`;
+  if (normalized === '/') return currentPath === '/';
+  return currentPath === normalized || currentPath.startsWith(normalized);
+}
+---
+
+<header
+  id="site-nav"
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 h-16 transition-colors duration-300',
+    isHome ? 'bg-transparent text-white' : 'bg-brand-charcoal text-white',
+  ]}
+  data-nav-home={isHome ? 'true' : 'false'}
+>
+  <nav class="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
+    <a
+      href={withBase('')}
+      class="font-semibold text-white hover:text-brand-terracotta transition-colors"
+    >
+      Jacob Freeman
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'text-sm font-medium tracking-widest uppercase transition-colors hover:text-brand-terracotta',
+              isActive(link.path) ? 'text-brand-terracotta' : 'text-white',
+            ]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      type="button"
+      id="nav-toggle"
+      class="md:hidden p-2 text-white hover:text-brand-terracotta transition-colors"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="nav-mobile-menu"
+    >
+      <Icon name="ph:list" class="w-6 h-6" />
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="nav-mobile-menu"
+    class="hidden md:hidden bg-brand-charcoal border-t border-white/10"
+    aria-hidden="true"
+  >
+    <ul class="px-6 py-4 flex flex-col gap-4">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'block text-sm font-medium tracking-widest uppercase transition-colors hover:text-brand-terracotta',
+              isActive(link.path) ? 'text-brand-terracotta' : 'text-white',
+            ]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-mobile-menu');
+  const isHome = nav?.dataset.navHome === 'true';
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+      menu.setAttribute('aria-hidden', String(expanded));
+    });
+  }
+
+  if (isHome && nav) {
+    const onScroll = () => {
+      if (window.scrollY > 48) {
+        nav.classList.remove('bg-transparent');
+        nav.classList.add('bg-brand-charcoal');
+      } else {
+        nav.classList.add('bg-transparent');
+        nav.classList.remove('bg-brand-charcoal');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>

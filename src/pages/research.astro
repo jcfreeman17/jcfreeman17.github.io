@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+---
+
+<Base title="Research">
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-28 md:pb-20">
+    <SectionHeader
+      title="Research"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    />
+
+    <section class="grid md:grid-cols-2 gap-8 mb-16">
+      <article class="bg-brand-parchment rounded-sm shadow-[0_2px_12px_rgba(107,76,59,0.10)] p-8 border border-brand-stone/20">
+        <h2 class="text-xl font-medium text-brand-charcoal mb-4">PEOPLE 3000</h2>
+        <p class="text-brand-charcoal leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel
+          scelerisque nisl consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+          Aenean eu leo quam; pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </p>
+      </article>
+      <article class="bg-brand-parchment rounded-sm shadow-[0_2px_12px_rgba(107,76,59,0.10)] p-8 border border-brand-stone/20">
+        <h2 class="text-xl font-medium text-brand-charcoal mb-4">Cognitive Styles & Collective Action</h2>
+        <p class="text-brand-charcoal leading-relaxed">
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+          Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        </p>
+      </article>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold text-brand-charcoal mb-8">Selected Publications</h2>
+      <div>
+        <PublicationItem
+          authors="Bird, D., Miranda, L., Vander Linden, M., Robinson, E., et al."
+          year={2022}
+          title="p3k14c, a synthetic global database of archaeological radiocarbon dates"
+          journal="Scientific Data, 9(1)"
+          doi="https://doi.org/10.1038/s41597-022-01818-w"
+        />
+        <PublicationItem
+          authors="Freeman, J., Robinson, E., Bird, D., Hard, R. J., Mauldin, R. P., et al."
+          year={2024}
+          title="The long-term expansion and recession of human populations"
+          journal="Proceedings of the National Academy of Sciences, 121(12)"
+          doi="https://doi.org/10.1073/pnas.2312207121"
+        />
+        <PublicationItem
+          authors="Freeman, J., Baggio, J. A., Miranda, L., Anderies, J. M."
+          year={2023}
+          title="Infrastructure and the energy use of human polities"
+          journal="Cross-Cultural Research, 57(2-3)"
+          doi="https://doi.org/10.1177/10693971231155700"
+        />
+        <PublicationItem
+          authors="Freeman, J., Mauldin, R. P., Hard, R. J., Whisenhunt, M., et al."
+          year={2024}
+          title="Hunter-gatherer population expansion and intensification: Malthusian and Boserupian dynamics"
+          journal="Journal of Archaeological Method and Theory, 31(3)"
+          doi="https://doi.org/10.1007/s10816-024-09588-4"
+        />
+        <PublicationItem
+          authors="Kelly, R. L., Mackie, M. E., Robinson, E., Meyer, J., et al."
+          year={2022}
+          title="A new radiocarbon database for the lower 48 states"
+          journal="American Antiquity, 87(3)"
+          doi="https://doi.org/10.1017/aaq.2022.23"
+        />
+        <PublicationItem
+          authors="Freeman, J., Gil, A. F., Peralta, E. A., Franchetti, F., et al."
+          year={2024}
+          title="A model of long-term population growth with an application to central west argentina"
+          journal="PLOS ONE, 19(8)"
+          doi="https://doi.org/10.1371/journal.pone.0307703"
+        />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-brand-charcoal mb-4">Presentations</h2>
+      <p class="text-lg text-brand-terracotta font-medium mb-3">
+        14 advanced seminars · 32 national and international conferences
+      </p>
+      <p class="text-brand-charcoal leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit
+        sit amet non magna. Vestibulum id ligula porta felis euismod semper; fusce dapibus tellus ac cursus
+        commodo tortor mauris condimentum nibh.
+      </p>
+    </section>
+  </main>
+</Base>

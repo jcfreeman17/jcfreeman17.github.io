@@ -1,17 +1,22 @@
 {
-  "name": "solar-shell",
+  "name": "freeman-portfolio",
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host 0.0.0.0 --port 4321",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host 0.0.0.0 --port 4321",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.3.7"
+    "@astrojs/tailwind": "^5.1.5",
+    "@fontsource/dm-sans": "^5.2.5",
+    "@iconify-json/ph": "^1.2.2",
+    "astro": "^5.7.0",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^3.4.17"
   }
 }

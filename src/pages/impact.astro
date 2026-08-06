@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import StatCard from '../components/StatCard.astro';
+---
+
+<Base title="Impact">
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-28 md:pb-20">
+    <SectionHeader
+      title="Impact"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    />
+
+    <section class="grid grid-cols-2 md:grid-cols-3 gap-10 mb-16">
+      <StatCard value="46" label="Peer-reviewed publications" />
+      <StatCard value="940+" label="Citations" />
+      <StatCard value="19" label="H-index" />
+      <StatCard value="$2.3M+" label="Research funding" />
+      <StatCard value="15" label="Graduate students mentored" />
+      <StatCard value="PLoS One" label="Academic Editor" />
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold text-brand-charcoal mb-8">Grants</h2>
+      <ul class="space-y-6">
+        <li class="border-b border-brand-stone/30 pb-6">
+          <p class="font-medium text-brand-charcoal">NSF DRMS — Group cognition, stress arousal, and environment feedbacks</p>
+          <p class="text-sm text-brand-stone mt-1">PI · March 2024–February 2027 · $630,000</p>
+        </li>
+        <li class="border-b border-brand-stone/30 pb-6">
+          <p class="font-medium text-brand-charcoal">PAGES — PEOPLE 3000 Scientific Working Group</p>
+          <p class="text-sm text-brand-stone mt-1">PI · August 2017–August 2025 · $35,000+ workshop support</p>
+        </li>
+        <li class="border-b border-brand-stone/30 pb-6">
+          <p class="font-medium text-brand-charcoal">NSF IBSS-L — General Intelligence, Social Intelligence, and Robust Cooperation</p>
+          <p class="text-sm text-brand-stone mt-1">PI · September 2016 · $465,892</p>
+        </li>
+        <li class="border-b border-brand-stone/30 pb-6">
+          <p class="font-medium text-brand-charcoal">NSF IBSS — Evolution of Social Networks and Climate Change (deep time)</p>
+          <p class="text-sm text-brand-stone mt-1">Co-PI · September 2015 · $998,350</p>
+        </li>
+        <li class="pb-2">
+          <p class="font-medium text-brand-charcoal">NSF BCS Archaeology — 6000 Years of Hunter-Gatherer Territoriality (Morhiss Site)</p>
+          <p class="text-sm text-brand-stone mt-1">Co-PI · August 2015 · $216,000</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-brand-charcoal mb-8">Outreach</h2>
+      <ul class="space-y-6">
+        <li>
+          <h3 class="font-medium text-brand-charcoal">Utah Public Radio</h3>
+          <p class="mt-2 text-brand-charcoal leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.
+            Donec sed odio dui; cras justo odio, dapibus ac facilisis in egestas eget quam.
+          </p>
+        </li>
+        <li>
+          <h3 class="font-medium text-brand-charcoal">The Leonardo Museum</h3>
+          <p class="mt-2 text-brand-charcoal leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies
+            vehicula ut id elit. Praesent commodo cursus magna vel scelerisque nisl consectetur.
+          </p>
+        </li>
+        <li>
+          <h3 class="font-medium text-brand-charcoal">Science On-Tap</h3>
+          <p class="mt-2 text-brand-charcoal leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed
+            consectetur. Etiam porta sem malesuada magna mollis euismod condimentum nibh venenatis.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</Base>

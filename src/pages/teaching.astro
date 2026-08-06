@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<Base title="Teaching">
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-12 md:pt-28 md:pb-20">
+    <SectionHeader
+      title="Teaching"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+    />
+
+    <p class="text-brand-charcoal leading-relaxed mb-12 max-w-3xl">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
+      Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor; sem malesuada
+      lacinia venenatis vestibulum nullam id dolor.
+    </p>
+
+    <section class="grid md:grid-cols-2 gap-12 mb-16">
+      <div>
+        <h2 class="text-xl font-medium text-brand-charcoal mb-4">Graduate Courses</h2>
+        <ul class="space-y-2 text-brand-charcoal">
+          <li>Lorem Ipsum Methods I</li>
+          <li>Dolor Sit Amet Seminar</li>
+          <li>Consectetur Adipiscing Theory</li>
+          <li>Elit Sed Do Workshop</li>
+          <li>Magna Fringilla Research Design</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-medium text-brand-charcoal mb-4">Undergraduate Courses</h2>
+        <ul class="space-y-2 text-brand-charcoal">
+          <li>Lorem Ipsum Civilizations</li>
+          <li>Introduction to Dolor Sit</li>
+          <li>Amet Consectetur Ecology</li>
+          <li>Adipiscing Elit Archaeology</li>
+          <li>Science and Sociis Natoque</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-xl font-medium text-brand-charcoal mb-6">Mentoring</h2>
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <p class="text-3xl font-semibold text-brand-terracotta">15</p>
+          <p class="mt-2 text-sm text-brand-stone">Graduate students mentored to degree completion</p>
+        </div>
+        <div>
+          <p class="text-3xl font-semibold text-brand-terracotta">4</p>
+          <p class="mt-2 text-sm text-brand-stone">Summer research grants chaired (undergraduate)</p>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="border-l-4 border-brand-terracotta pl-6 py-2 text-brand-charcoal italic leading-relaxed">
+      “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet
+      rutrum faucibus dolor auctor—duis mollis, est non commodo luctus, nisi erat porttitor ligula.”
+    </blockquote>
+  </main>
+</Base>

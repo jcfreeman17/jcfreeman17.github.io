@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  authors: string;
+  year: string | number;
+  title: string;
+  journal: string;
+  doi?: string;
+}
+
+const { authors, year, title, journal, doi } = Astro.props;
+---
+
+<article class="border-b border-brand-stone/30 py-6 last:border-0">
+  <p class="text-brand-charcoal leading-relaxed">
+    {authors} ({year}). {title}. <em>{journal}</em>.
+    {doi && (
+      <a
+        href={doi}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 ml-2 text-brand-terracotta hover:text-brand-earth transition-colors"
+        aria-label="View publication DOI"
+      >
+        <Icon name="ph:arrow-square-out" class="w-4 h-4" />
+      </a>
+    )}
+  </p>
+</article>
